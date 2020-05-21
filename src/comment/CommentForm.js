@@ -8,6 +8,8 @@ class CommentForm extends React.Component {
         let text = this.refs.text.value;
 
         console.log("submitted form", author, text);
+
+        this.props.onCommentSubmit({author, text});
     }
 
     render() {
