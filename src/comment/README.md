@@ -6,4 +6,6 @@ CommentBox
     - Comment
     - Comment
   - Comment Forum (Create)
-  - Submit (Button)
+    - Name
+    - Comment text
+    - Submit (Button)
