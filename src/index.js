@@ -6,11 +6,11 @@ import CommentBox from './comment/CommentBox';
 import * as serviceWorker from './serviceWorker';
 
 // simulate how server communicate back the comment
-let comments = require("./server/comments.json");
+// let comments = require("./server/comments.json");
 
 ReactDOM.render(
   <React.StrictMode>
-    <CommentBox data={comments} />
+    <CommentBox url="../comments.json" />
   </React.StrictMode>,
   document.getElementById('root')
 );
