@@ -9,7 +9,7 @@ class CommentForm extends React.Component {
 
         console.log("submitted form", author, text);
 
-        this.props.onCommentSubmit({author, text});
+        this.props.onCommentSubmit({author, text, date: 'Just Now' });
     }
 
     render() {

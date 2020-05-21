@@ -49,6 +49,13 @@ class CommentBox extends React.Component {
 
     handleCommentSubmit(comment) {
         console.log(comment);
+        
+        let comments = this.state.comments;
+        let newComments = comments.concat(comment); 
+
+        this.setState({
+            comments:newComments
+        });
     }
 
     render() {
@@ -58,7 +65,7 @@ class CommentBox extends React.Component {
                 <h1>Comments</h1>
                 <div className="ui divider">
                     <CommentList comments={this.state.comments}/>
-                    <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+                    <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
                 </div>
             </div>
         );
