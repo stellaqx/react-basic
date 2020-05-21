@@ -5,9 +5,15 @@ import App from './App';
 import CommentBox from './comment/CommentBox';
 import * as serviceWorker from './serviceWorker';
 
+// simulate how server communicate back the comment
+var comments = [
+    {"author":"Joe", "date":"5 minutes ago", "text":"Hi there"},
+    {"author":"Mary", "date":"12 minutes ago", "text":"Nice to meet you!"},
+]; 
+
 ReactDOM.render(
   <React.StrictMode>
-    <CommentBox />
+    <CommentBox data={comments} />
   </React.StrictMode>,
   document.getElementById('root')
 );
