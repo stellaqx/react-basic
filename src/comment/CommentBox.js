@@ -1,10 +1,8 @@
-'use strict';
-
 import React from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
-import $ from 'jquery';
-import loadJsonFile from "load-json-file";
+//import $ from 'jquery';
+//import loadJsonFile from "load-json-file";
 
 // we would like to query the server for comments data
 // and only update the part that has changed
