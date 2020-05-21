@@ -1,0 +1,14 @@
+{
+  "resolve": {
+    "@jspm/core": "npm:@jspm/core@1.1.1",
+    "jquery": "npm:jquery@3.5.1"
+  },
+  "dependencies": {
+    "npm:@jspm/core@1.1.1": {
+      "source": "https://registry.npmjs.org/@jspm/core/-/core-1.1.1.tgz#sha512-5JjuDSzcxuxgzJ/+ynA7bcqZkI9CdDBERXOnDGdhphxNfmd4PkNl0RDE4hUH0+n8yEaz08Tdmjgxe7tlX3LmRA=="
+    },
+    "npm:jquery@3.5.1": {
+      "source": "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz#sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg=="
+    }
+  }
+}
