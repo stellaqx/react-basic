@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // react router can grab the param from url, and specify which component to respond
-import {Router, Route, Link} from 'react-router';
+// import {Router, Route, Link} from 'react-router';
+// import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import './index.css';
 //import App from './App';
 import CommentBox from './comment/CommentBox';
@@ -15,7 +17,9 @@ class App extends React.Component {
     return (
       <div>
         <div className="ui secondary pointing menu">
-          {/*links*/}
+          <Link to="/" className="item">Home</Link>
+          <br></br>
+          <Link to="/tv" className="item">TVs</Link>
         </div>
         {this.props.children}
       </div>
@@ -39,15 +43,30 @@ class TV extends React.Component {
 
 class Show extends React.Component {
   render() {
-    return (<h3>Show Name</h3>); 
+    return (<div><h3>I am a show</h3></div>
+   ); 
   }
 }
 
+/* Comment Box ReactDom
 ReactDOM.render(
   <React.StrictMode>
     <CommentBox url="../comments.json" />
   </React.StrictMode>,
   document.getElementById('root')
+);
+*/
+
+ReactDOM.render(
+  (
+  <Router>
+    <Switch>
+      <Route path="/tv/show/:id" component={Show} />
+      <Route exact path="/tv" component={TV} />
+      <Route exact path="/" component={App}/>
+    </Switch>
+  </Router>
+  ), document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
