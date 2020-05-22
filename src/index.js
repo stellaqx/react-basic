@@ -42,8 +42,13 @@ class TV extends React.Component {
 }
 
 class Show extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props.match.params);
+  }
+
   render() {
-    return (<div><h3>I am a show</h3></div>
+  return (<div><h3>I am a show {this.props.match.params.id}</h3></div>
    ); 
   }
 }
