@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // react router can grab the param from url, and specify which component to respond
 // import {Router, Route, Link} from 'react-router';
 // import {Link} from 'react-router-dom';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Switch, IndexRoute} from 'react-router-dom';
 import './index.css';
 //import App from './App';
 import CommentBox from './comment/CommentBox';
@@ -53,6 +53,13 @@ class Show extends React.Component {
   }
 }
 
+class Home extends React.Component {
+  render() {
+    return (<div><h3>Home Page</h3></div>
+  ); 
+  }
+}
+
 /* Comment Box ReactDom
 ReactDOM.render(
   <React.StrictMode>
@@ -67,9 +74,10 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/tv/show/:id" component={Show} />
-      <Route exact path="/tv" component={TV} />
-      <Route exact path="/" component={App}/>
+      <Route path="/tv" component={TV} />
+      <Route path="/" component={App}/>
     </Switch>
+    <Route exact path="/" component={Home}/>
   </Router>
   ), document.getElementById('root')
 );
